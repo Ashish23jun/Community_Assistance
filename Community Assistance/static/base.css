@@ -1,0 +1,10 @@
+.d-inline-block {
+    display: inline-block!important;
+    width: 2rem;
+    border-radius: 20%;
+}
+.carousel-inner img{
+    max-width: auto;
+    height: 20rem;
+    margin: auto;
+}
