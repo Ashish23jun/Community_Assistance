@@ -14,3 +14,4 @@ python-rake==1.4.5
 pytz==2020.1
 six==1.15.0
 sqlparse==0.3.1
+# New
