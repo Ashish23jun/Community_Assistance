@@ -10,3 +10,4 @@
 * **Request System:** Users can request answers for a question from other users.
 * **Text Formatting:** Integration of django-summernote for better text formatting.
 * Many more!
+# Update to trigger a new commit
