@@ -4,40 +4,77 @@
 
 {% block body %}
 
-<div class="container ms-3 mt-3 me-3">
-    <form class="row g-3" method="post" action="">
+<style>
+  .container {
+      max-width: 800px;
+      padding: 30px 20px;
+      background-color: #f9f9f9;
+      border-radius: 15px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+  }
+  .form-label {
+      font-weight: 600;
+      color: #333;
+  }
+  .form-control {
+      border-radius: 8px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+  }
+  .form-control:focus {
+      border-color: #6c63ff;
+      box-shadow: 0px 0px 12px rgba(108, 99, 255, 0.5);
+  }
+  .btn-primary {
+      background-color: #6c63ff;
+      border-color: #6c63ff;
+      border-radius: 20px;
+      padding: 10px 20px;
+      transition: all 0.3s ease-in-out;
+  }
+  .btn-primary:hover {
+      background-color: #5953cc;
+      border-color: #5953cc;
+  }
+</style>
+
+<div class="container">
+    <h2 class="text-center mb-4">Register Your Query</h2>
+    <form class="row g-4" method="post" action="">
       {% csrf_token %}
         <div class="col-md-6">
           <label for="Email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" name="Email">
+          <input type="email" class="form-control" id="inputEmail4" name="Email" placeholder="Enter your email">
         </div>
-        <div class="col-12">
+        <div class="col-md-6">
           <label for="Name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="" name="Name">
+          <input type="text" class="form-control" id="inputName" name="Name" placeholder="Full name">
         </div>
         <div class="col-12">
           <label for="Address" class="form-label">Address</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="" name="Address">
+          <input type="text" class="form-control" id="inputAddress" placeholder="Street Address" name="Address">
         </div>
         <div class="col-md-6">
           <label for="City" class="form-label">City</label>
-          <input type="text" class="form-control" id="inputCity" name="City">
+          <input type="text" class="form-control" id="inputCity" name="City" placeholder="City">
         </div>
         <div class="col-md-4">
           <label for="State" class="form-label">State</label>
-          <input type="text" class="form-control" id="inputState" name="State">
+          <input type="text" class="form-control" id="inputState" name="State" placeholder="State">
         </div>
         <div class="col-md-2">
           <label for="Zip" class="form-label">Zip Code</label>
-          <input type="number" class="form-control" id="inputZip" name="Zip">
-        </div>
-        <div class="col-md-6">
-            <label for="Comments" class="form-label">Comments</label>
-            <input type="text" class="form-control" id="inputComment" name="Comments">
+          <input type="number" class="form-control" id="inputZip" name="Zip" placeholder="Zip">
         </div>
         <div class="col-12">
+            <label for="Comments" class="form-label">Comments</label>
+            <textarea class="form-control" id="inputComment" name="Comments" placeholder="Add any additional comments here" rows="3"></textarea>
+        </div>
+        <div class="col-12 text-center">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </form>
   </div>
+
 {% endblock body %}
